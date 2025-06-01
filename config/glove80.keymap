@@ -36,7 +36,68 @@
 #endif
 
 /* Custom Device-tree */
-// Underglow layer temporarily removed for debugging
+/ {
+    behaviors {
+        ug: underglow_behavior {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "UNDERGLOW_BEHAVIOR";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1>, <&rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER>;
+        };
+    };
+
+    underglow-layer {
+        compatible = "zmk,underglow-layer";
+
+        base {
+            bindings = <
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                                                          &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                                          &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                                          &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                                          &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                  &ug 0x000000 &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000                 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                >;
+            layer-id = <LAYER_Base>;
+        };
+
+        lower {
+            bindings = <
+    &ug 0x000000    &ug 0x000000  &ug 0x000000    &ug 0x000000    &ug 0x000000                                                                              &ug 0x000000      &ug 0x000000      &ug 0x000000      &ug 0x000000     &ug 0x000000
+    &ug 0x800080 &ug 0xFFC0CB &ug 0xFFC0CB   &ug 0xFFC0CB   &ug 0xFFC0CB   &ug 0xFFC0CB                                                          &ug 0x000000 &ug 0xFFA500   &ug 0xFFA500   &ug 0xFFA500   &ug 0xFFA500  &ug 0xFF0000
+    &ug 0x800080 &ug 0x000000  &ug 0x000000    &ug 0xFFA500 &ug 0x000000    &ug 0x000000                                                           &ug 0x000000 &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFA500  &ug 0x000000
+    &ug 0x800080 &ug 0x000000  &ug 0xFFA500 &ug 0xFF0000    &ug 0xFFA500 &ug 0x000000                                                           &ug 0x000000 &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFA500  &ug 0x000000
+    &ug 0x0000FF   &ug 0x000000  &ug 0xFF0000    &ug 0xFF0000    &ug 0xFF0000    &ug 0x000000  &ug 0x008080     &ug 0x000000   &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFF0000     &ug 0x0000FF
+    &ug 0x000000    &ug 0x000000  &ug 0xFFA500 &ug 0xFFA500 &ug 0xFFA500          &ug 0x000000      &ug 0x008000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000         &ug 0xFFFF00   &ug 0xFFFF00   &ug 0xFFA500   &ug 0xFF0000     &ug 0x000000
+                >;
+            layer-id = <LAYER_Lower>;
+        };
+
+        magic {
+            bindings = <
+                &ug 0x000000  &ug 0x000000  &ug 0x000000 &ug 0x000000  &ug 0x000000                                                                      &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000
+                &ug 0x000000  &ug 0x000000  &ug 0x000000 &ug 0x000000  &ug 0x000000  &ug 0x000000                                                    &ug 0xFFC0CB &ug 0xFFC0CB &ug 0xFFC0CB &ug 0xFFC0CB &ug 0xFFC0CB &ug 0x000000
+                &ug 0x000000  &ug 0x0000FF &ug 0x000000 &ug 0x0000FF &ug 0x0000FF &ug 0x0000FF                                                   &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x0000FF
+                &ug 0x000000  &ug 0x0000FF &ug 0x000000 &ug 0x000000  &ug 0x000000  &ug 0x0000FF                                                   &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000
+                &ug 0x0000FF &ug 0x000000  &ug 0x000000 &ug 0x000000  &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000   &ug 0x000000 &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x0000FF
+                &ug 0x000000  &ug 0x000000  &ug 0x000000 &ug 0x000000  &ug 0x000000          &ug 0x000000 &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x008000 &ug 0x000000          &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000  &ug 0x000000
+                >;
+            layer-id = <LAYER_Magic>;
+        };
+
+        factory {
+            bindings = <
+                &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000                                                                        &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                        &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                &ug 0x000000 &ug 0x000000  &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000                                                        &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                &ug 0x000000 &ug 0x008080 &ug 0x000000 &ug 0xFF0000 &ug 0x000000 &ug 0x000000                                                        &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                &ug 0x000000 &ug 0x0000FF &ug 0xFF0000 &ug 0xFF0000 &ug 0xFF0000 &ug 0x000000 &ug 0xFFA500 &ug 0x0000FF &ug 0x000000    &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                &ug 0x000000 &ug 0x0000FF &ug 0x000000 &ug 0x000000 &ug 0x000000         &ug 0xFF0000    &ug 0x000000  &ug 0x008000  &ug 0x000000 &ug 0x000000 &ug 0x000000         &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000 &ug 0x000000
+                >;
+            layer-id = <LAYER_Factory>;
+        };
+    };
+};
 
 /* Input Listeners */
 
