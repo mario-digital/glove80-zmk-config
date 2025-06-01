@@ -135,7 +135,7 @@
         bt_1: bt_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_1";
-            #binding-calls = <0>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
         };
