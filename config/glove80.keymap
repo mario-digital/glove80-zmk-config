@@ -36,56 +36,35 @@
 #endif
 
 /* Custom Device-tree */
+// RGB color macros for layer-based underglow
 / {
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-
-        base {
-            bindings = <
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                  &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                >;
-            layer-id = <LAYER_Base>;
+    macros {
+        rgb_base: rgb_base {
+            label = "RGB_BASE_LAYER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(0,0,0)>;  // Black/Off
         };
-
-        lower {
-            bindings = <
-    &ug ___    &ug ___  &ug ___    &ug ___    &ug ___                                                                              &ug ___      &ug ___      &ug ___      &ug ___     &ug ___
-    &ug PURPLE &ug PINK &ug PINK   &ug PINK   &ug PINK   &ug PINK                                                          &ug ___ &ug ORANGE   &ug ORANGE   &ug ORANGE   &ug ORANGE  &ug RED
-    &ug PURPLE &ug ___  &ug ___    &ug ORANGE &ug ___    &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
-    &ug PURPLE &ug ___  &ug ORANGE &ug RED    &ug ORANGE &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
-    &ug BLUE   &ug ___  &ug RED    &ug RED    &ug RED    &ug ___  &ug TEAL     &ug ___   &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug RED     &ug BLUE
-    &ug ___    &ug ___  &ug ORANGE &ug ORANGE &ug ORANGE          &ug ___      &ug GREEN &ug ___  &ug ___ &ug ___ &ug ___         &ug YELLOW   &ug YELLOW   &ug ORANGE   &ug RED     &ug ___
-                >;
-            layer-id = <LAYER_Lower>;
+        
+        rgb_lower: rgb_lower {
+            label = "RGB_LOWER_LAYER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(300,100,50)>;  // Purple
         };
-
-        magic {
-            bindings = <
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___                                                                      &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___  &ug ___                                                    &ug PINK &ug PINK &ug PINK &ug PINK &ug PINK &ug ___
-                &ug ___  &ug BLUE &ug ___ &ug BLUE &ug BLUE &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
-                &ug ___  &ug BLUE &ug ___ &ug ___  &ug ___  &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                &ug BLUE &ug ___  &ug ___ &ug ___  &ug ___  &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___   &ug ___ &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___          &ug ___ &ug ___ &ug ___  &ug ___ &ug GREEN &ug ___          &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                >;
-            layer-id = <LAYER_Magic>;
+        
+        rgb_magic: rgb_magic {
+            label = "RGB_MAGIC_LAYER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(240,100,50)>;  // Blue
         };
-
-        factory {
-            bindings = <
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug TEAL &ug ___ &ug RED &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug BLUE &ug RED &ug RED &ug RED &ug ___ &ug ORANGE &ug BLUE &ug ___    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug BLUE &ug ___ &ug ___ &ug ___         &ug RED    &ug ___  &ug GREEN  &ug ___ &ug ___ &ug ___         &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                >;
-            layer-id = <LAYER_Factory>;
+        
+        rgb_factory: rgb_factory {
+            label = "RGB_FACTORY_LAYER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(180,100,50)>;  // Cyan/Teal
         };
     };
 };
@@ -104,6 +83,35 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
+        };
+        
+        // Layer switch with RGB change
+        to_lower: to_lower {
+            compatible = "zmk,behavior-macro";
+            label = "TO_LOWER_RGB";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_Lower>, <&rgb_lower>;
+        };
+        
+        to_base: to_base {
+            compatible = "zmk,behavior-macro";
+            label = "TO_BASE_RGB";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_Base>, <&rgb_base>;
+        };
+        
+        to_magic: to_magic {
+            compatible = "zmk,behavior-macro";
+            label = "TO_MAGIC_RGB";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_Magic>, <&rgb_magic>;
+        };
+        
+        to_factory: to_factory {
+            compatible = "zmk,behavior-macro";
+            label = "TO_FACTORY_RGB";
+            #binding-cells = <0>;
+            bindings = <&to LAYER_Factory>, <&rgb_factory>;
         };
     };
 };
@@ -361,7 +369,7 @@ macros {
             &kp EQUAL     &kp N1     &kp N2     &kp N3  &kp N4  &kp N5                                                                &kp N6     &kp N7     &kp N8       &kp N9     &kp N0   &kp RALT
               &kp TAB      &kp Q      &kp W      &kp E   &kp R   &kp T                                                                 &kp Y      &kp U      &kp I        &kp O      &kp P   &kp BSLH
             &kp GRAVE      &kp A      &kp S      &kp D   &kp F   &kp G                                                                 &kp H      &kp J      &kp K        &kp L   &kp FSLH    &kp SQT
-            &kp LSHFT      &kp Z      &kp X      &kp C   &kp V   &kp B   &kp END     &to 1  &kp LALT  &kp LCTRL  &kp RGUI   &kp HOME   &kp N      &kp M  &kp COMMA      &kp DOT   &kp SEMI  &kp RSHFT
+            &kp LSHFT      &kp Z      &kp X      &kp C   &kp V   &kp B   &kp END  &to_lower  &kp LALT  &kp LCTRL  &kp RGUI   &kp HOME   &kp N      &kp M  &kp COMMA      &kp DOT   &kp SEMI  &kp RSHFT
  &magic LAYER_Magic 0  &kp PG_DN     &kp F1   &kp DOWN  &kp UP          &kp BSPC  &kp LGUI   &kp RET  &kp MINUS   &kp RET  &kp SPACE           &kp LEFT  &kp RIGHT     &kp LBKT   &kp RBKT  &kp PG_DN
             >;
         };
@@ -372,7 +380,7 @@ macros {
                &trans         &none           &none           &none            &none   &kp HOME                                                                     &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
                &trans         &none           &none    &kp UP_ARROW            &none    &kp END                                                                    &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
                &trans         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                                              &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
-               &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN     &kp SEMI      &to 0  &kp SPACE    &kp DQT  &kp LBRC  &kp RBRC                  &none   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
+               &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN     &kp SEMI   &to_base  &kp SPACE    &kp DQT  &kp LBRC  &kp RBRC                  &none   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
  &magic LAYER_Magic 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &kp LS(RET)  &kp COMMA     &trans  &kp COLON  &kp LBKT  &kp RBKT                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
             >;
         };
@@ -384,7 +392,7 @@ macros {
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &to 3
+       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none     &to_factory
             >;
         };
 
