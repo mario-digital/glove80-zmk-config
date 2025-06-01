@@ -42,48 +42,48 @@
 
         base {
             bindings = <
-    0x000000 0x000000 0x000000 0x000000 0x000000                                                                                          0x000000 0x000000 0x000000 0x000000 0x000000
-    0x000000 0x000000 0x000000 0x000000 0x000000 0x000000                                                                          0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-    0x000000 0x000000 0x000000 0x000000 0x000000 0x000000                                                                          0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-    0x000000 0x000000 0x000000 0x000000 0x000000 0x000000                                                                          0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-    0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000  0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-    0x000000 0x000000 0x000000 0x000000 0x000000                  0x000000 0x000000 0x000000  0x000000 0x000000 0x000000                 0x000000 0x000000 0x000000 0x000000 0x000000
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                  &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
                 >;
             layer-id = <LAYER_Base>;
         };
 
         lower {
             bindings = <
-    0x000000    0x000000  0x000000    0x000000    0x000000                                                                              0x000000      0x000000      0x000000      0x000000     0x000000
-    0x800080 0xFFC0CB 0xFFC0CB   0xFFC0CB   0xFFC0CB   0xFFC0CB                                                          0x000000 0xFFA500   0xFFA500   0xFFA500   0xFFA500  0xFF0000
-    0x800080 0x000000  0x000000    0xFFA500 0x000000    0x000000                                                           0x000000 0xFFFF00   0xFFFF00   0xFFFF00   0xFFA500  0x000000
-    0x800080 0x000000  0xFFA500 0xFF0000    0xFFA500 0x000000                                                           0x000000 0xFFFF00   0xFFFF00   0xFFFF00   0xFFA500  0x000000
-    0x0000FF   0x000000  0xFF0000    0xFF0000    0xFF0000    0x000000  0x008080     0x000000   0x000000  0x000000 0x000000 0x000000 0x000000 0xFFFF00   0xFFFF00   0xFFFF00   0xFF0000     0x0000FF
-    0x000000    0x000000  0xFFA500 0xFFA500 0xFFA500          0x000000      0x008000 0x000000  0x000000 0x000000 0x000000         0xFFFF00   0xFFFF00   0xFFA500   0xFF0000     0x000000
+    &ug ___    &ug ___  &ug ___    &ug ___    &ug ___                                                                              &ug ___      &ug ___      &ug ___      &ug ___     &ug ___
+    &ug PURPLE &ug PINK &ug PINK   &ug PINK   &ug PINK   &ug PINK                                                          &ug ___ &ug ORANGE   &ug ORANGE   &ug ORANGE   &ug ORANGE  &ug RED
+    &ug PURPLE &ug ___  &ug ___    &ug ORANGE &ug ___    &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
+    &ug PURPLE &ug ___  &ug ORANGE &ug RED    &ug ORANGE &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
+    &ug BLUE   &ug ___  &ug RED    &ug RED    &ug RED    &ug ___  &ug TEAL     &ug ___   &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug RED     &ug BLUE
+    &ug ___    &ug ___  &ug ORANGE &ug ORANGE &ug ORANGE          &ug ___      &ug GREEN &ug ___  &ug ___ &ug ___ &ug ___         &ug YELLOW   &ug YELLOW   &ug ORANGE   &ug RED     &ug ___
                 >;
             layer-id = <LAYER_Lower>;
         };
 
         magic {
             bindings = <
-                0x000000  0x000000  0x000000 0x000000  0x000000                                                                      0x000000  0x000000  0x000000  0x000000  0x000000
-                0x000000  0x000000  0x000000 0x000000  0x000000  0x000000                                                    0xFFC0CB 0xFFC0CB 0xFFC0CB 0xFFC0CB 0xFFC0CB 0x000000
-                0x000000  0x0000FF 0x000000 0x0000FF 0x0000FF 0x0000FF                                                   0x000000  0x000000  0x000000  0x000000  0x000000  0x0000FF
-                0x000000  0x0000FF 0x000000 0x000000  0x000000  0x0000FF                                                   0x000000  0x000000  0x000000  0x000000  0x000000  0x000000
-                0x0000FF 0x000000  0x000000 0x000000  0x000000  0x000000 0x000000 0x000000 0x000000  0x000000 0x000000   0x000000 0x000000  0x000000  0x000000  0x000000  0x000000  0x0000FF
-                0x000000  0x000000  0x000000 0x000000  0x000000          0x000000 0x000000 0x000000  0x000000 0x008000 0x000000          0x000000  0x000000  0x000000  0x000000  0x000000
+                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___                                                                      &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
+                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___  &ug ___                                                    &ug PINK &ug PINK &ug PINK &ug PINK &ug PINK &ug ___
+                &ug ___  &ug BLUE &ug ___ &ug BLUE &ug BLUE &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
+                &ug ___  &ug BLUE &ug ___ &ug ___  &ug ___  &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
+                &ug BLUE &ug ___  &ug ___ &ug ___  &ug ___  &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___   &ug ___ &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
+                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___          &ug ___ &ug ___ &ug ___  &ug ___ &ug GREEN &ug ___          &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
                 >;
             layer-id = <LAYER_Magic>;
         };
 
         factory {
             bindings = <
-                0x000000 0x000000  0x000000 0x000000 0x000000                                                                        0x000000 0x000000 0x000000 0x000000 0x000000
-                0x000000 0x000000  0x000000 0x000000 0x000000 0x000000                                                        0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-                0x000000 0x000000  0x000000 0x000000 0x000000 0x000000                                                        0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-                0x000000 0x008080 0x000000 0xFF0000 0x000000 0x000000                                                        0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-                0x000000 0x0000FF 0xFF0000 0xFF0000 0xFF0000 0x000000 0xFFA500 0x0000FF 0x000000    0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000 0x000000
-                0x000000 0x0000FF 0x000000 0x000000 0x000000         0xFF0000    0x000000  0x008000  0x000000 0x000000 0x000000         0x000000 0x000000 0x000000 0x000000 0x000000
+                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+                &ug ___ &ug TEAL &ug ___ &ug RED &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+                &ug ___ &ug BLUE &ug RED &ug RED &ug RED &ug ___ &ug ORANGE &ug BLUE &ug ___    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+                &ug ___ &ug BLUE &ug ___ &ug ___ &ug ___         &ug RED    &ug ___  &ug GREEN  &ug ___ &ug ___ &ug ___         &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
                 >;
             layer-id = <LAYER_Factory>;
         };
