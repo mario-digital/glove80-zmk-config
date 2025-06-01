@@ -11,8 +11,8 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v4
         with:
-          repository: moergo-sc/zmk
-          ref: main
+          repository: darknao/zmk
+          ref: darknao/rgb-dts
           path: src
       - uses: cachix/install-nix-action@v25
         with:
@@ -21,12 +21,17 @@ jobs:
         with:
           name: moergo-glove80-zmk-dev
           skipPush: true
-      - name: Build Glove80 combined firmware
-        run: nix-build config -o combined
-      - name: Copy result out of nix store
-        run: cp combined/glove80.uf2 glove80.uf2
-      - name: Upload result
+      - name: Build Glove80 firmware (left half)
+        run: west build -s src/app -d build/left -b glove80_lh -- -DZMK_CONFIG="$PWD/config"
+      - name: Build Glove80 firmware (right half) 
+        run: west build -s src/app -d build/right -b glove80_rh -- -DZMK_CONFIG="$PWD/config"
+      - name: Copy firmware files
+        run: |
+          mkdir -p firmware
+          cp build/left/zephyr/zmk.uf2 firmware/glove80_left.uf2
+          cp build/right/zephyr/zmk.uf2 firmware/glove80_right.uf2
+      - name: Upload firmware
         uses: actions/upload-artifact@v4
         with:
-          name: glove80.uf2
-          path: glove80.uf2
+          name: glove80-firmware
+          path: firmware
