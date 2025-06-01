@@ -34,19 +34,11 @@
 #endif
 
 /* Custom Device-tree */
-/ {
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-        
-        base {
-            bindings = <&ug GREEN &ug GREEN ... >;  // Set colors for base layer
-            layer-id = <0>;
-        };
-        
-        lower {
-            bindings = <&ug BLUE &ug BLUE ... >;   // Set colors for lower layer  
-            layer-id = <1>;
-        };
+underglow-layer {
+    compatible = "zmk,underglow-layer";
+    base {
+        bindings = <&ug GREEN &ug GREEN &ug GREEN &ug GREEN &ug GREEN /* ...continue for all LEDs */>;
+        layer-id = <0>;
     };
 };
 
