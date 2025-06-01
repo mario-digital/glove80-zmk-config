@@ -42,12 +42,12 @@
 
         base {
             bindings = <
-    &ug ___ &ug ___      &ug ___      &ug ___      &ug ___                                                                                    &ug ___      &ug ___      &ug ___      &ug ___      &ug ___
-    &ug ___ &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL                                                         &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug ___
-    &ug ___ &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL                                                         &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug ___      &ug ___
-    &ug ___ &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL                                                         &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug ___
-    &ug ___ &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug_cl TEAL &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug_cl TEAL &ug_cl TEAL &ug ___      &ug ___      &ug ___      &ug ___
-    &ug ___ &ug ___      &ug ___      &ug ___      &ug ___                     &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                 &ug ___      &ug ___      &ug ___      &ug ___      &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
+    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                  &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
                 >;
             layer-id = <LAYER_Base>;
         };
