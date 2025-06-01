@@ -36,60 +36,7 @@
 #endif
 
 /* Custom Device-tree */
-/ {
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-
-        base {
-            bindings = <
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                                                                          &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___                  &ug ___ &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                 &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                >;
-            layer-id = <LAYER_Base>;
-        };
-
-        lower {
-            bindings = <
-    &ug ___    &ug ___  &ug ___    &ug ___    &ug ___                                                                              &ug ___      &ug ___      &ug ___      &ug ___     &ug ___
-    &ug PURPLE &ug PINK &ug PINK   &ug PINK   &ug PINK   &ug PINK                                                          &ug ___ &ug ORANGE   &ug ORANGE   &ug ORANGE   &ug ORANGE  &ug RED
-    &ug PURPLE &ug ___  &ug ___    &ug ORANGE &ug ___    &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
-    &ug PURPLE &ug ___  &ug ORANGE &ug RED    &ug ORANGE &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
-    &ug BLUE   &ug ___  &ug RED    &ug RED    &ug RED    &ug ___  &ug TEAL     &ug ___   &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug RED     &ug BLUE
-    &ug ___    &ug ___  &ug ORANGE &ug ORANGE &ug ORANGE          &ug ___      &ug GREEN &ug ___  &ug ___ &ug ___ &ug ___         &ug YELLOW   &ug YELLOW   &ug ORANGE   &ug RED     &ug ___
-                >;
-            layer-id = <LAYER_Lower>;
-        };
-
-        magic {
-            bindings = <
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___                                                                      &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___  &ug ___                                                    &ug PINK &ug PINK &ug PINK &ug PINK &ug PINK &ug ___
-                &ug ___  &ug BLUE &ug ___ &ug BLUE &ug BLUE &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
-                &ug ___  &ug BLUE &ug ___ &ug ___  &ug ___  &ug BLUE                                                   &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                &ug BLUE &ug ___  &ug ___ &ug ___  &ug ___  &ug ___ &ug ___ &ug ___ &ug ___  &ug ___ &ug ___   &ug ___ &ug ___  &ug ___  &ug ___  &ug ___  &ug ___  &ug BLUE
-                &ug ___  &ug ___  &ug ___ &ug ___  &ug ___          &ug ___ &ug ___ &ug ___  &ug ___ &ug GREEN &ug ___          &ug ___  &ug ___  &ug ___  &ug ___  &ug ___
-                >;
-            layer-id = <LAYER_Magic>;
-        };
-
-        factory {
-            bindings = <
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___                                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug ___  &ug ___ &ug ___ &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug TEAL &ug ___ &ug RED &ug ___ &ug ___                                                        &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug BLUE &ug RED &ug RED &ug RED &ug ___ &ug ORANGE &ug BLUE &ug ___    &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                &ug ___ &ug BLUE &ug ___ &ug ___ &ug ___         &ug RED    &ug ___  &ug GREEN  &ug ___ &ug ___ &ug ___         &ug ___ &ug ___ &ug ___ &ug ___ &ug ___
-                >;
-            layer-id = <LAYER_Factory>;
-        };
-    };
-};
-
+// Underglow layer temporarily removed for debugging
 
 /* Input Listeners */
 
