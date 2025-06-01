@@ -54,12 +54,12 @@
 
         lower {
             bindings = <
-    &ug ___    &ug ___  &ug ___    &ug ___    &ug ___                                                                              &ug ___         &ug ___         &ug ___         &ug ___     &ug ___
-    &ug PURPLE &ug PINK &ug PINK   &ug PINK   &ug PINK   &ug PINK                                                          &ug ___ &ug_nl WHITE ORANGE &ug ORANGE      &ug ORANGE      &ug ORANGE  &ug RED
-    &ug PURPLE &ug ___  &ug ___    &ug ORANGE &ug ___    &ug ___                                                           &ug ___ &ug_nl RED YELLOW   &ug_nl RED YELLOW &ug_nl RED YELLOW &ug ORANGE  &ug ___
-    &ug PURPLE &ug ___  &ug ORANGE &ug RED    &ug ORANGE &ug ___                                                           &ug ___ &ug_nl RED YELLOW   &ug_nl RED YELLOW &ug_nl RED YELLOW &ug ORANGE  &ug ___
-    &ug BLUE   &ug ___  &ug RED    &ug RED    &ug RED    &ug ___  &ug_cl BLUE TEAL &ug ___   &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug_nl RED YELLOW   &ug_nl RED YELLOW &ug_nl RED YELLOW &ug RED     &ug BLUE
-    &ug ___    &ug ___  &ug ORANGE &ug ORANGE &ug ORANGE          &ug ___          &ug GREEN &ug ___  &ug ___ &ug ___ &ug ___         &ug_nl RED YELLOW   &ug_nl RED YELLOW &ug ORANGE        &ug RED     &ug ___
+    &ug ___    &ug ___  &ug ___    &ug ___    &ug ___                                                                              &ug ___      &ug ___      &ug ___      &ug ___     &ug ___
+    &ug PURPLE &ug PINK &ug PINK   &ug PINK   &ug PINK   &ug PINK                                                          &ug ___ &ug ORANGE   &ug ORANGE   &ug ORANGE   &ug ORANGE  &ug RED
+    &ug PURPLE &ug ___  &ug ___    &ug ORANGE &ug ___    &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
+    &ug PURPLE &ug ___  &ug ORANGE &ug RED    &ug ORANGE &ug ___                                                           &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug ORANGE  &ug ___
+    &ug BLUE   &ug ___  &ug RED    &ug RED    &ug RED    &ug ___  &ug TEAL     &ug ___   &ug ___  &ug ___ &ug ___ &ug ___ &ug ___ &ug YELLOW   &ug YELLOW   &ug YELLOW   &ug RED     &ug BLUE
+    &ug ___    &ug ___  &ug ORANGE &ug ORANGE &ug ORANGE          &ug ___      &ug GREEN &ug ___  &ug ___ &ug ___ &ug ___         &ug YELLOW   &ug YELLOW   &ug ORANGE   &ug RED     &ug ___
                 >;
             layer-id = <LAYER_Lower>;
         };
@@ -135,7 +135,7 @@
         bt_1: bt_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "BT_1";
-            #binding-cells = <0>;
+            #binding-calls = <0>;
             tapping-term-ms = <200>;
             bindings = <&bt_select_1>, <&bt BT_DISC 1>;
         };
