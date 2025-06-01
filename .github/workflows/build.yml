@@ -22,6 +22,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python3 -m pip install --user -U west
+          python3 -m pip install --user -U pyelftools
           echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Initialize west workspace
         run: |
